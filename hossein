@@ -1,0 +1,20 @@
+# USING ANSI COLORS
+BLACK="\e[30m"
+RED="\e[31m"
+GREEN="\e[32m"
+YELLOW="\e[33m"
+BLUE="\e[34m"
+PURPLE="\e[35m"
+CYAN="\e[36m"
+WHITE="\e[37m"
+
+# The actual script start from here:
+echo "${RED}"
+printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+echo "${GREEN}"
+figlet -tc H O S S E I N
+figlet -tc M O U S A V I
+echo "${GREEN}"
+echo "${RED}"
+printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+
