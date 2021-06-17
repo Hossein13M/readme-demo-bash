@@ -1,0 +1,4 @@
+[submodule "vendor/bash-utility"]
+	path = vendor/bash-utility
+	url = https://github.com/labbots/bash-utility
+	branch = master

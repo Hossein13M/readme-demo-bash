@@ -8,6 +8,7 @@ PURPLE="\e[35m"
 CYAN="\e[36m"
 WHITE="\e[37m"
 
+
 # The actual script start from here:
 echo "${RED}"
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
@@ -17,4 +18,45 @@ figlet -tc M O U S A V I
 echo "${GREEN}"
 echo "${RED}"
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+
+sleep 0.5s
+echo "${CYAN}"
+#figlet -tc Software
+sleep 0.5s 
+#figlet -tc Developer
+echo "${YELLOW}"
+printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+sleep 0.5s
+echo "I have worked with JavaScript"
+printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+
+
+width=$COLUMNS
+string='kitty cat'
+printf "%$(((width-${#string})/2))s%s\n" "" "$string" 
+
+
+# Print the given text in the center of the screen.
+center() {
+  local width
+  width="${COLUMNS:-$(tput cols)}"
+  while IFS= read -r; do
+    # If, by luck, REPLY is the same as width, then just dump it
+    (( ${#REPLY} == width )) && printf -- '%s\n' "${REPLY}" && continue
+
+    # Handle lines of any length longer than width
+    # this ensures that wrapped overflow is centered
+    if (( ${#REPLY} > width )); then
+      while read -r subreply; do
+        (( ${#subreply} == width )) && printf -- '%s\n' "${subreply}" && continue
+        printf -- '%*s\n' $(( (${#subreply} + width) / 2 )) "${subreply}"
+      done < <(fold -w "${width}" <<< "${REPLY}")
+      continue
+    fi
+
+    # Otherwise, print centered
+    printf -- '%*s\n' $(( (${#REPLY} + width) / 2 )) "${REPLY}"
+  done < "${1:-/dev/stdin}"
+}
+
 
