@@ -25,14 +25,14 @@ printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 
 sleep 0.5s
 echo "${CYAN}"
-#figlet -tc Software
+figlet -tc Software
 sleep 0.5s 
-#figlet -tc Developer
+figlet -tc Developer
 echo "${YELLOW}"
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-sleep 0.5s
-echo "I have worked with JavaScript"
-printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+#sleep 0.5s
+#echo "I have worked with JavaScript"
+#printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 
 
 
