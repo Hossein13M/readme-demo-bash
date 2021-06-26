@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 
 source "vendor/bash-utility/src/format.sh"
 
-# USING ANSI COLORS
+# DECLARING ANSI COLORS
 BLACK="\e[30m"
 RED="\e[31m"
 GREEN="\e[32m"
@@ -33,5 +33,6 @@ printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 sleep 0.5s
 echo "I have worked with JavaScript"
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
-format::text_center "This text is in centre of the terminal."
+
+
 
