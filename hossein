@@ -1,6 +1,6 @@
-#!/bin/sh
+##!/bin/bash
 
-source "vendor/bash-utility/src/format.sh"
+#source "vendor/bash-utility/src/format.sh"
 
 # DECLARING ANSI COLORS
 BLACK="\e[30m"
@@ -17,18 +17,15 @@ WHITE="\e[37m"
 echo "${RED}"
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 echo "${GREEN}"
-figlet -tc H O S S E I N
-figlet -tc M O U S A V I
-echo "${GREEN}"
+figlet -tc "H o s s e i n     M o u s a v i"
 echo "${RED}"
-printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 
-sleep 0.5s
 echo "${CYAN}"
-figlet -tc Software
-sleep 0.5s 
-figlet -tc Developer
+sleep 0.5s
+figlet -tc "Software   Developer"
+#figlet -tc Developer
 echo "${YELLOW}"
+sleep 0.5s
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 #sleep 0.5s
 #echo "I have worked with JavaScript"
