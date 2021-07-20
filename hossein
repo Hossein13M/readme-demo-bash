@@ -11,7 +11,7 @@ BLUE="\e[34m"
 PURPLE="\e[35m"
 CYAN="\e[36m"
 WHITE="\e[37m"
-
+# end of colors declaration
 
 # The actual script start from here:
 echo "${RED}"
