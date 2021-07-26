@@ -1,0 +1,19 @@
+{
+  "name": "demo",
+  "version": "1.0.1",
+  "description": "nothing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hossein13m/readme-demo-bash.git"
+  },
+  "author": "Hossein Mousavi <dev.hosseinmousavi@gmail.com> (https://hmousavi.dev/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hossein13m/readme-demo-bash/issues"
+  },
+  "homepage": "https://github.com/hossein13m/readme-demo-bash#readme"
+}
